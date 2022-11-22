@@ -1,0 +1,29 @@
+.navegador {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+
+}
+
+.lista {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-right: 15px;
+    
+}
+.lista ul a{ 
+    cursor: pointer;
+    color: brown;
+}
