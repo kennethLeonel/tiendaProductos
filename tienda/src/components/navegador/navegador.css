@@ -27,3 +27,23 @@
     cursor: pointer;
     color: brown;
 }
+
+.cart-widget {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .qty-display {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(225, 213, 213);
+    border-radius: 50%;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+    line-height: 17px;
+    color: brown;
+  }

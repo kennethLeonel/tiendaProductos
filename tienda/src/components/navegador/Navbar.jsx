@@ -1,5 +1,5 @@
 import './navegador.css'
-
+import CartWidget from './CartWidget';
 const Navbar = (props) => {
 
     return (
@@ -11,12 +11,15 @@ const Navbar = (props) => {
                 </div>
                 
                 <div>
-                    {props.children}
+                    
                     <li className='lista'>
                         <ul> <a href="#nav"> Inicio</a> </ul>
                         <ul> <a href="#nav"> Productos</a> </ul>
                         <ul> <a href="#nav"> Contacto</a> </ul>
+                        <CartWidget></CartWidget>
+                     
                     </li>
+                    
                 </div>
             </nav>
         </div>
