@@ -1,23 +1,21 @@
 
 import './item.css'
-
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import {productos} from'../../listaProductos'
+import Item from './Item';
 const ItemListContainer = (props) => {
-    const [carrito, setCarrito] = useState( []);
-    const productos = props.productos;
-        function agregarCarrito (id)  {
-            setCarrito = productos.filter((producto) => producto.id === id);
+   
+    let productosFinal;
+
+       
+        if(props.categoria){
+            productosFinal = productos.filter((producto) =>  producto.categoria === props.categoria);
+           
+        }else{
+            productosFinal = productos;
         }
         const mostrarProductos = () => {
-            return productos.map((producto) => (
-                <div className='producto' >
-                   <p>{producto.nombre} </p>
-                   <img src={producto.imagen}  />
-                     <p>{producto.precio}</p>
-                     <button className='boton' onClick={() => agregarCarrito(producto.id)}>Agregar Carrito</button>
-                     <Link to={`/producto/${producto.id}`}><button variant="secondary" >Detalle Producto</button></Link>
-                </div>
+            return productosFinal.map((producto) => (
+                <Item producto={producto}  />
                ))
         }
     
