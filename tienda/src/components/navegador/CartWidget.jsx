@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './navegador.css'
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
-
+import './navegador.css'
 const CartWidget = () => {
     let productsCounter = 0;
     return (
